@@ -46,4 +46,16 @@ while turns1 > 0:
 
             # if the user has input the wrong alphabet then
             #it will ask user to enter another alphabet
-            guess1 
+            guess1 = input("guess another character:")
+
+            # here, it will check input with the character in word
+            if guess1 not in word1:
+
+                turns1 -= 1
+
+                # if the input character does not match the word
+                # then "Wrong Gruess" will be given as output
+                print("Wrong Guess")
+
+                if turns1 == 0:
+                    print("User Loose")
